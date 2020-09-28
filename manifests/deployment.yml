@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: renaisanciaspnetcoreapirestdockeralpine 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: renaisanciaspnetcoreapirestdockeralpine
+  template:
+    metadata:
+      labels:
+        app: renaisanciaspnetcoreapirestdockeralpine 
+    spec:
+      containers:
+        - name: renaisanciaspnetcoreapirestdockeralpine 
+          image: renaisanci.azurecr.io/renaisanciaspnetcoreapirestdockeralpine
+          ports:
+          - containerPort: 80
