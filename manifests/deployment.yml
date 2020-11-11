@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apicontagem 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apicontagem
+  template:
+    metadata:
+      labels:
+        app: apicontagem 
+    spec:
+      containers:
+        - name: apicontagem 
+          image: fonsecadevops.azurecr.io/apicontagem
+          ports:
+          - containerPort: 80
