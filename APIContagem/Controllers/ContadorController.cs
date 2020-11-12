@@ -23,7 +23,7 @@ namespace APIContagem.Controllers
                 {
                     _CONTADOR.ValorAtual,
                     Environment.MachineName,
-                    Local = "CI/CD Docker Kubernetes",
+                    Local = "CI/CD Docker Kubernetes with enviroment variable from config web app for container ",
                     Sistema = Environment.OSVersion.VersionString,
                     Variavel = configuration["TesteAmbiente"],
                     TargetFramework = Assembly
