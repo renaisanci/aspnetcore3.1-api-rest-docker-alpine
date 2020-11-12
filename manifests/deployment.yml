@@ -1,24 +1,24 @@
---- 
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: apicontagem
-spec: 
+  labels:
+    app: apicontagem
+spec:
   replicas: 1
-  selector: 
-    matchLabels: 
+  selector:
+    matchLabels:
       app: apicontagem
-  template: 
-    metadata: 
-      labels: 
+  template:
+    metadata:
+      labels:
         app: apicontagem
-    spec: 
-      containers: 
-        - 
-          env: 
-            - "name:TesteAmbiente value:Utilizando o azure Kubernetes service (AKS)"
-          image: fonsecadevops.azurecr.io/apicontagem
-          name: apicontagem
-          ports: 
-            - 
-              containerPort: 80
+    spec:
+      containers:
+      - name: apicontagem
+        image: fonsecadevops.azurecr.io/apicontagem
+        env:
+          - name: TesteAmbiente
+            value: Teste utilizando o Azure Kubernetes Service (AKS)
+        ports:
+        - containerPort: 80
