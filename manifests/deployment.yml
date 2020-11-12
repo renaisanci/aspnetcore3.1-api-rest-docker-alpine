@@ -17,6 +17,6 @@ spec:
           image: fonsecadevops.azurecr.io/apicontagem
           env:
             - name:TesteAmbiente
-              valur:Utilizando o azure Kubernetes service (AKS)
+              value:Utilizando o azure Kubernetes service (AKS)
           ports:
           - containerPort: 80
